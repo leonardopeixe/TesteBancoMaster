@@ -13,6 +13,7 @@ builder.Services.AddDbContext<Context>(options =>
 // Informações ao Swagger
 builder.Services.AddSwaggerGen(c =>
 {
+    c.EnableAnnotations();
     c.SwaggerDoc("v1", new OpenApiInfo
     {
         Title = "Teste Banco Master API",

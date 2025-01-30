@@ -43,7 +43,7 @@ namespace App.Services
             return graph;
         }
 
-        private static BestRouteResponse FindCheapestPath(string origin, string destination,
+        private static BestRouteResponse? FindCheapestPath(string origin, string destination,
             Dictionary<string, Dictionary<string, decimal>> graph)
         {
             var visited = new Dictionary<string, (decimal Cost, string Path)>();
@@ -71,9 +71,13 @@ namespace App.Services
                     }
                 }
             }
-
+            var message = visited[destination].Path + " ao custo de $" + visited[destination].Cost;
             return visited.ContainsKey(destination)
-                ? new BestRouteResponse { Route = visited[destination].Path, TotalCost = visited[destination].Cost }
+                ? new BestRouteResponse(
+                    visited[destination].Path, 
+                    visited[destination].Cost, 
+                    message
+                )
                 : null;
         }
     }
