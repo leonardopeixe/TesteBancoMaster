@@ -1,3 +1,10 @@
+# Necessidades do projeto
+- [x] O resultado da consulta no programa deve ser: **GRU - BRC - SCL - ORL - CDG ao custo de $40** - Esta no campo message do retorno do endpoint
+- [x] Registro de novas rotas. Essas novas rotas devem ser persistidas para futuras consultas
+- [x] Consulta de melhor rota entre dois pontos
+- [x] Implementação de testes unitários
+- [x] Rotas iniciais
+
 ## Rotas Iniciais
 ### [POST] /Routes
 Registra nova rota
