@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>21599db4-bfc7-404d-8716-061cc8c78306</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.1">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.1" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="7.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+		<ProjectReference Include="..\Domain\Domain.csproj" />
+		<ProjectReference Include="..\App\App.csproj" />
+		<ProjectReference Include="..\Repository\Repository.csproj" />
+    </ItemGroup>
+
+</Project>
