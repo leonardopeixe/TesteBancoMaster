@@ -59,10 +59,10 @@ namespace TestUnit
         public async Task GetBestRoute_WhenNoRouteExists_ShouldReturnNull()
         {
             // Arrange
-            _mockRepo.Setup(r => r.GetAllRoutes()).ReturnsAsync(new List<Route>());
+            _mockRepo.Setup(r => r.GetAllRoutes()).ReturnsAsync(_routes);
 
             // Act
-            var result = await _service.GetBestRoute("GRU", "CDG");
+            var result = await _service.GetBestRoute("GRU", "CDGX");
 
             // Assert
             Assert.Null(result);

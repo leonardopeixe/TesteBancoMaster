@@ -71,12 +71,11 @@ namespace App.Services
                     }
                 }
             }
-            var message = visited[destination].Path + " ao custo de $" + visited[destination].Cost;
             return visited.ContainsKey(destination)
                 ? new BestRouteResponse(
                     visited[destination].Path, 
-                    visited[destination].Cost, 
-                    message
+                    visited[destination].Cost,
+                    visited[destination].Path + " ao custo de $" + visited[destination].Cost
                 )
                 : null;
         }
